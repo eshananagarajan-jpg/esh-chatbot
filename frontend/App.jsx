@@ -18,7 +18,7 @@ function App() {
 
     try {
       // Send to backend API
-      const response = await fetch('https://esh-chatbot.onrender.com', {
+      const response = await fetch('https://esh-chatbot.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })
