@@ -6,13 +6,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.BACKEND_PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.json({ status: 'Server is running!' });
+});
 
 app.post('/api/chat', async (req, res) => {
   try {
