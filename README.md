@@ -122,15 +122,15 @@ npm run dev
 **Request:**
 ```json
 {
-  "message": "Hello, how are you?"
+  "message": "Hello"
 }
 ```
 
 **Response:**
 ```json
 {
-  "user": "Hello, how are you?",
-  "bot": "You said: \"Hello, how are you?\". This is a test response."
+  "user": "Hello",
+  "bot": "Hello! How can I help you today?"
 }
 ```
 
