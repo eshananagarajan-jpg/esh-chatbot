@@ -26,8 +26,8 @@ function App() {
 
       const data = await response.json();
       
-      // Add bot response to chat
-      setMessages(prev => [...prev, { type: 'bot', text: data.bot }]);
+      // Add bot response t
+      // setMessages(prev => [...prev, { type: 'bot', text: data.bot || 'Sorry, I could not get a reply. Please try again.' }]);
     } catch (error) {
       console.error('Error:', error);
       setMessages(prev => [...prev, { type: 'bot', text: 'Sorry, error connecting to server.' }]);
